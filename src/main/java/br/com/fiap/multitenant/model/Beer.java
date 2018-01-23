@@ -11,9 +11,6 @@ public class Beer implements Serializable {
     Long id;
     private String nome;
     private String tipo;
-    private String xxx;
-
- /*   private User user;*/
 
     public Long getId() {
         return id;
@@ -39,21 +36,4 @@ public class Beer implements Serializable {
         this.tipo = tipo;
     }
 
-    public String getXxx() {
-        return xxx;
-    }
-
-    public void setXxx(String xxx) {
-        this.xxx = xxx;
-    }
-
-    /*    @ManyToOne
-    @JoinColumn(name="user_id")
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }*/
 }
