@@ -13,6 +13,11 @@ import static br.com.fiap.multitenant.multitenant.MultiTenantConstants.DEFAULT_T
 @Component
 public class DataSourceBasedMultiTenantConnectionProviderImpl extends AbstractDataSourceBasedMultiTenantConnectionProviderImpl {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8068516706367842489L;
+
 	@Autowired
     DataSource defaultDS;
 

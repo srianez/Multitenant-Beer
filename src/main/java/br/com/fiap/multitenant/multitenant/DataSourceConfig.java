@@ -8,7 +8,11 @@ import java.io.Serializable;
 @Entity
 public class DataSourceConfig implements Serializable {
 
-    @Id @GeneratedValue
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 6204631435410292754L;
+	@Id @GeneratedValue
     private Long id;
     private String name;
     private String url;

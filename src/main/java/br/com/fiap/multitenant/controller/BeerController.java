@@ -1,28 +1,33 @@
 package br.com.fiap.multitenant.controller;
 
 
-import br.com.fiap.multitenant.model.Beer;
-import br.com.fiap.multitenant.repository.BeerRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
 import java.util.Iterator;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.fiap.multitenant.model.BeerStyle;
+import br.com.fiap.multitenant.repository.BeerStyleRepository;
+
 @RestController
-@RequestMapping(value = "/beer")
+@RequestMapping(value = "/beerStyle")
 public class BeerController {
 
     @Autowired
-    private BeerRepository beerRepository;
+    private BeerStyleRepository beerStyleRepository;
 
     @GetMapping
-    public Iterator<Beer> getAll() {
-        return beerRepository.findAll().iterator();
+    public Iterator<BeerStyle> getAll() {
+        return beerStyleRepository.findAll().iterator();
     }
 
     @PostMapping
-    public void save(@RequestBody Beer beer) {
-        beerRepository.save(beer);
+    public void save(@RequestBody BeerStyle beerStyle) {
+    	beerStyleRepository.save(beerStyle);
     }
 
 }

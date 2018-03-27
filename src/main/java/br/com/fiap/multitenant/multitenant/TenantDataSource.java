@@ -15,7 +15,12 @@ import java.util.Map;
 @Component
 public class TenantDataSource implements Serializable {
 
-    private HashMap<String, DataSource> dataSources = new HashMap<>();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -5496372071390289084L;
+
+	private HashMap<String, DataSource> dataSources = new HashMap<>();
 
     @Autowired
     private DataSourceConfigRepository configRepo;
